@@ -90,6 +90,11 @@ class SwerveModule {
       driveMotor.set(0);
       steeringMotor.set(0);
   }
+
+  public void setTestSpeed() {
+    driveMotor.set(0.1);
+    steeringMotor.set(0.1);
+}
 }
 
 public class SwerveSubsystem extends SubsystemBase {
@@ -191,6 +196,13 @@ public class SwerveSubsystem extends SubsystemBase {
         m_backLeftModule.stop();
         m_backRightModule.stop();
     }
+
+    public void setModuleTestSpeed() {
+      m_frontLeftModule.setTestSpeed();
+      m_frontRightModule.setTestSpeed();
+      m_backLeftModule.setTestSpeed();
+      m_backRightModule.setTestSpeed();
+  }
 
     public void showChasisSpeedsOnLogger(String labelString){
       double currentState[] = getCurrentChasisSpeeds();
