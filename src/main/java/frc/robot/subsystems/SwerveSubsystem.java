@@ -61,8 +61,8 @@ class SwerveModule {
       this.driveMotorInverted = driveMotorInverted;
       this.steeringMotorInverted = steeringMotorInverted;
 
-      driveMotor.setInverted(driveMotorInverted);
-      steeringMotor.setInverted(steeringMotorInverted);
+      //driveMotor.setInverted(driveMotorInverted);
+      //steeringMotor.setInverted(steeringMotorInverted);
       
       this.angleEncoder = new CANcoder(encoderPort);
       this.angleEncoderInverted = encoderInverted;
@@ -92,24 +92,20 @@ class SwerveModule {
   }
 }
 
-
-
-
-
 public class SwerveSubsystem extends SubsystemBase {
     //int driveMotorPort;
     //int steeringMotorPort;
 
-        private final SwerveModule m_frontLeftModule   = new SwerveModule(SwerveMotorDeviceConstants.frontLeftDriveId, SwerveMotorDeviceConstants.frontLeftSteeringId, SwerveMotorDeviceConstants.frontLeftdriveMotorInverted, SwerveMotorDeviceConstants.frontLeftsteeringMotorInverted, SwerveMotorDeviceConstants.frontLeftCANcoderId, SwerveMotorDeviceConstants.frontLeftAngleOffset, SwerveMotorDeviceConstants.frontLeftdriveMotorInverted);
-    private SwerveModule m_frontRightModule  = new SwerveModule(SwerveMotorDeviceConstants.frontRightDriveId, SwerveMotorDeviceConstants.frontRightSteeringId,
+    private final SwerveModule m_frontLeftModule   = new SwerveModule(SwerveMotorDeviceConstants.frontLeftDriveId, SwerveMotorDeviceConstants.frontLeftSteeringId, SwerveMotorDeviceConstants.frontLeftdriveMotorInverted, SwerveMotorDeviceConstants.frontLeftsteeringMotorInverted, SwerveMotorDeviceConstants.frontLeftCANcoderId, SwerveMotorDeviceConstants.frontLeftAngleOffset, SwerveMotorDeviceConstants.frontLeftdriveMotorInverted);
+    private final SwerveModule m_frontRightModule  = new SwerveModule(SwerveMotorDeviceConstants.frontRightDriveId, SwerveMotorDeviceConstants.frontRightSteeringId,
                                                         SwerveMotorDeviceConstants.frontRightdriveMotorInverted, SwerveMotorDeviceConstants.frontRightsteeringMotorInverted,
                                                         SwerveMotorDeviceConstants.frontRightCANcoderId, SwerveMotorDeviceConstants.frontRightAngleOffset,
                                                         SwerveMotorDeviceConstants.frontRightdriveMotorInverted);
-    SwerveModule m_backLeftModule    = new SwerveModule(SwerveMotorDeviceConstants.backLeftDriveId, SwerveMotorDeviceConstants.backLeftSteeringId,
+    private final SwerveModule m_backLeftModule    = new SwerveModule(SwerveMotorDeviceConstants.backLeftDriveId, SwerveMotorDeviceConstants.backLeftSteeringId,
                                                         SwerveMotorDeviceConstants.backLeftdriveMotorInverted, SwerveMotorDeviceConstants.backLeftsteeringMotorInverted,
                                                         SwerveMotorDeviceConstants.backLeftCANcoderId, SwerveMotorDeviceConstants.backLeftAngleOffset,
                                                         SwerveMotorDeviceConstants.backLeftdriveMotorInverted);
-    SwerveModule m_backRightModule   = new SwerveModule(SwerveMotorDeviceConstants.backRightDriveId, SwerveMotorDeviceConstants.backRightSteeringId,
+    private final SwerveModule m_backRightModule   = new SwerveModule(SwerveMotorDeviceConstants.backRightDriveId, SwerveMotorDeviceConstants.backRightSteeringId,
                                                         SwerveMotorDeviceConstants.backRightdriveMotorInverted, SwerveMotorDeviceConstants.backRightsteeringMotorInverted,
                                                         SwerveMotorDeviceConstants.backRightCANcoderId, SwerveMotorDeviceConstants.backRightAngleOffset,
                                                         SwerveMotorDeviceConstants.backRightdriveMotorInverted);
