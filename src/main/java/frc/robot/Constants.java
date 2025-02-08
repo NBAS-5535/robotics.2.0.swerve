@@ -101,10 +101,10 @@ public static final int swerveOptions = 0;
     public static final int backRightCANcoderId = 32;
     public static final int backLeftCANcoderId = 34;
 
-    public static final double frontLeftAngleOffset = 358.;
-    public static final double frontRightAngleOffset = 225.;
-    public static final double backRightAngleOffset = 159.;
-    public static final double backLeftAngleOffset = 250.;
+    public static final double frontLeftAngleOffset = 67.3;
+    public static final double frontRightAngleOffset = 301.7;
+    public static final double backRightAngleOffset = -179.9;
+    public static final double backLeftAngleOffset = 51.2;
 
     public static final boolean frontLeftdriveMotorInverted = false;
     public static final boolean backLeftdriveMotorInverted = false;

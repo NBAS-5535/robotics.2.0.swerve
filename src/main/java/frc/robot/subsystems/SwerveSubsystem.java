@@ -91,9 +91,9 @@ class SwerveModule {
       steeringMotor.set(0);
   }
 
-  public void setTestSpeed() {
-    driveMotor.set(0.1);
-    steeringMotor.set(0.1);
+  public void setTestSpeed(double drive, double turn) {
+    driveMotor.set(drive);
+    steeringMotor.set(turn);
 }
 }
 
@@ -197,11 +197,11 @@ public class SwerveSubsystem extends SubsystemBase {
         m_backRightModule.stop();
     }
 
-    public void setModuleTestSpeed() {
-      m_frontLeftModule.setTestSpeed();
-      m_frontRightModule.setTestSpeed();
-      m_backLeftModule.setTestSpeed();
-      m_backRightModule.setTestSpeed();
+    public void setModuleTestSpeed(double drive, double turn) {
+      m_frontLeftModule.setTestSpeed(drive, turn);
+      m_frontRightModule.setTestSpeed(drive, turn);
+      m_backLeftModule.setTestSpeed(drive, turn);
+      m_backRightModule.setTestSpeed(drive, turn);
   }
 
     public void showChasisSpeedsOnLogger(String labelString){

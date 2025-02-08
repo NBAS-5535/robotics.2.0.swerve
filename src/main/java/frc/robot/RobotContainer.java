@@ -74,11 +74,14 @@ public class RobotContainer {
                                                       () -> m_driverController.getRawAxis(OperatorConstants.kDriverXAxis),
                                                       () -> m_driverController.getRawAxis(OperatorConstants.kDriverRotAxis)
                                                       ));
-        m_driverController.b().whileTrue(new SwerveDriveForwardCommand(m_swerve, 0.25, 0., 0.));
-        m_driverController.a().whileTrue(new SwerveDriveForwardCommand(m_swerve, 0., 0., 0.));
+        //m_driverController.b().whileTrue(new SwerveDriveForwardCommand(m_swerve, 0.25, 0., 0.));
+        //m_driverController.a().whileTrue(new SwerveDriveForwardCommand(m_swerve, 0., 0., 0.));
     
-        m_driverController.x().whileTrue(new SwerveDriveForwardTimerCommand(m_swerve, 0.6, 0, 10.));
-        m_driverController.y().whileTrue(new InstantCommand(() -> m_swerve.setModuleTestSpeed()));                                              
+        //m_driverController.x().whileTrue(new SwerveDriveForwardTimerCommand(m_swerve, 0.6, 0, 10.));
+        m_driverController.a().onTrue(new InstantCommand(() -> m_swerve.setModuleTestSpeed(0., 0.))); 
+        m_driverController.b().whileTrue(new InstantCommand(() -> m_swerve.setModuleTestSpeed(0.2, 0.))); 
+        m_driverController.x().whileTrue(new InstantCommand(() -> m_swerve.setModuleTestSpeed(0., 0.1))); 
+        m_driverController.y().whileTrue(new InstantCommand(() -> m_swerve.setModuleTestSpeed(0.2, 0.1)));                                              
   }    
 
   /**
